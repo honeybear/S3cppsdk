@@ -8,7 +8,7 @@
 
 using namespace std;
 
-#define LOOP_NUM	100
+#define LOOP_NUM 100
 
 /**
  *	routine description here
@@ -16,8 +16,8 @@ using namespace std;
 void MyClass::Function()
 {
 	// define local vars
-	bool	bLocalVarName;
-	int		iLocalVarName;
+	bool bLocalVarName;
+	int iLocalVarName;
 	
 	// DON'T use magic number in loops
 	for (int i=0; i<LOOP_NUM; i++)
