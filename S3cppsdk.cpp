@@ -20,6 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		/* always cleanup */ 
 		curl_easy_cleanup(curl); 
 	} 
+	while(1){}
 	return 0;
 }
 
