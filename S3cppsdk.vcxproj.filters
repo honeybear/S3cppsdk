@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="curl_7.33.0_include">
+      <UniqueIdentifier>{3de6749f-9110-4bea-8766-a95fc9e793a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="curl_lib">
+      <UniqueIdentifier>{3635e32b-9841-4e35-94bd-ee19237753c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +30,39 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MyClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\curl.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\curlbuild.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\curlrules.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\curlver.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\easy.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\mprintf.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\multi.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\stdcheaders.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
+    <ClInclude Include="curl_7.33.0_include\curl\typecheck-gcc.h">
+      <Filter>curl_7.33.0_include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -32,5 +71,18 @@
     <ClCompile Include="S3cppsdk.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MyClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="S3cppsdk.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="curl_lib\libcurl.lib">
+      <Filter>curl_lib</Filter>
+    </Library>
   </ItemGroup>
 </Project>
