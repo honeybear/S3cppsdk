@@ -19,6 +19,9 @@
     <Filter Include="curl_lib">
       <UniqueIdentifier>{3635e32b-9841-4e35-94bd-ee19237753c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tinyxml2">
+      <UniqueIdentifier>{309cb103-855b-4523-9aee-0af0cc598666}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -28,9 +31,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MyClass.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -63,6 +63,12 @@
     <ClInclude Include="curl_7.33.0_include\curl\typecheck-gcc.h">
       <Filter>curl_7.33.0_include</Filter>
     </ClInclude>
+    <ClInclude Include="HeaderSample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2\tinyxml2.h">
+      <Filter>tinyxml2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -71,8 +77,11 @@
     <ClCompile Include="S3cppsdk.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MyClass.cpp">
+    <ClCompile Include="ClassSample.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2\tinyxml2.cpp">
+      <Filter>tinyxml2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
