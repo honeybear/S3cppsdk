@@ -1,4 +1,12 @@
-S3cppsdk
-=============
+#S3cppsdk
 
-An AWS S3 c++ devTools
+This devTool is for developers using C++.
+
+##Check out for development
+    git clone git@github.com:honeybear/S3cppsdk.git
+
+##Development Progress:
+>Prototype developing
+
+##Suggestion
+>Contact me at honeybearteam@gmail.com
