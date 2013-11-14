@@ -1,12 +1,12 @@
-#S3cppsdk
+###S3cppsdk
 
-This devTool is for developers using C++.
+>This devTool is for developers using C++.
 
-##Check out for development
+###Check out for development
     git clone git@github.com:honeybear/S3cppsdk.git
 
-##Development Progress:
+###Development Progress:
 >Prototype developing
 
-##Suggestion
+###Suggestion
 >Contact me at honeybearteam@gmail.com
