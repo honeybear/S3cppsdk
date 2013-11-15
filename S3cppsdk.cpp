@@ -9,6 +9,7 @@
 #include <time.h>
 #include "HMAC_SHA1.h"
 #include "base64.h"
+#include <vector>
 
 using namespace std;
 using namespace tinyxml2;
@@ -203,23 +204,26 @@ int SampleOfCurllibHttpPost()
 
 void SampleOfS3Get()
 {
+	vector<int> a;
 	//Init curl 
 	curl_global_init(CURL_GLOBAL_ALL);
 	CURL* curlHandle = curl_easy_init();
 	
 	//Init var
 	char* curlErrStr = (char*)malloc(CURL_ERROR_SIZE);
-	curl_slist* httpHeaders = new curl_slist(); 
+	curl_slist* httpHeaders = NULL; 
 	const char* date = getDateForHeader();
 	//cout<<date;
 	httpHeaders = curl_slist_append(httpHeaders, "Host: s3.amazonaws.com");//Set Host
 	httpHeaders = curl_slist_append(httpHeaders, date);//Set Date
 	httpHeaders = curl_slist_append(httpHeaders, getAuthorizationForHeader("AKIAISZALBSYEIIWKXGQ","tIzCCFh1+WOnVA0/Jsn5KqTfuCAWyD1eyeOKStx0",date));//Set authorization
-	
+
 	//Execute
 	if(curlHandle) 
 	{
-		curl_easy_setopt(curlHandle, CURLOPT_VERBOSE, CURLOPT_STDERR);
+		curl_easy_setopt(curlHandle, CURLOPT_VERBOSE, CURLOPT_STDERR);//Set verbose mode
+		curl_easy_setopt(curlHandle, CURLOPT_FOLLOWLOCATION,1);//Set automaticallly redirection
+		curl_easy_setopt(curlHandle, CURLOPT_MAXREDIRS,1);//Set max redirection times
 		curl_easy_setopt(curlHandle, CURLOPT_ERRORBUFFER, curlErrStr);//Set error buffer
 		curl_easy_setopt(curlHandle, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);//Set http version 1.1
 		curl_easy_setopt(curlHandle, CURLOPT_HEADER, httpHeaders);//Set headers
@@ -231,6 +235,17 @@ void SampleOfS3Get()
 		{
 			cout<<curl_easy_strerror(curlErr)<<endl;
 		}
+
+		//Output redirection url
+		if(CURLE_OK == curlErr) 
+        {
+             char *url;
+             curlErr = curl_easy_getinfo(curlHandle, CURLINFO_EFFECTIVE_URL, &url);
+
+             if((CURLE_OK == curlErr) && url)
+                 cout<<"CURLINFO_EFFECTIVE_URL: "<<url<<endl;
+        }
+
 		/* Clean-up libcurl */
 		curl_global_cleanup();
 	}
