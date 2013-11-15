@@ -22,6 +22,9 @@
     <Filter Include="tinyxml2">
       <UniqueIdentifier>{309cb103-855b-4523-9aee-0af0cc598666}</UniqueIdentifier>
     </Filter>
+    <Filter Include="encodeUtils">
+      <UniqueIdentifier>{6bc80b29-fecb-4635-aabd-44896d6a6d0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -69,6 +72,15 @@
     <ClInclude Include="tinyxml2\tinyxml2.h">
       <Filter>tinyxml2</Filter>
     </ClInclude>
+    <ClInclude Include="encodeUtils\HMAC_SHA1.h">
+      <Filter>encodeUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="encodeUtils\SHA1.h">
+      <Filter>encodeUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="encodeUtils\base64.h">
+      <Filter>encodeUtils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -82,6 +94,15 @@
     </ClCompile>
     <ClCompile Include="tinyxml2\tinyxml2.cpp">
       <Filter>tinyxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="encodeUtils\HMAC_SHA1.cpp">
+      <Filter>encodeUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="encodeUtils\SHA1.cpp">
+      <Filter>encodeUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="encodeUtils\base64.cpp">
+      <Filter>encodeUtils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

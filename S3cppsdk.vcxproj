@@ -50,9 +50,9 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\s3cppsdk\S3cppsdk\tinyxml2;D:\s3cppsdk\S3cppsdk\curl_7.33.0_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\s3cppsdk\S3cppsdk\encodeUtils;D:\s3cppsdk\S3cppsdk\tinyxml2;D:\s3cppsdk\S3cppsdk\curl_7.33.0_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,6 +91,9 @@
     <ClInclude Include="curl_7.33.0_include\curl\multi.h" />
     <ClInclude Include="curl_7.33.0_include\curl\stdcheaders.h" />
     <ClInclude Include="curl_7.33.0_include\curl\typecheck-gcc.h" />
+    <ClInclude Include="encodeUtils\base64.h" />
+    <ClInclude Include="encodeUtils\HMAC_SHA1.h" />
+    <ClInclude Include="encodeUtils\SHA1.h" />
     <ClInclude Include="HeaderSample.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
@@ -102,6 +105,15 @@
   <ItemGroup>
     <ClCompile Include="ClassSample.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="encodeUtils\base64.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="encodeUtils\HMAC_SHA1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="encodeUtils\SHA1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="S3cppsdk.cpp" />
     <ClCompile Include="stdafx.cpp">
